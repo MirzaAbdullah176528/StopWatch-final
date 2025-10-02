@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color: #D2C1B6;
+
+}
+
+.body {
+  transform: scale(0.9); 
+}
+html {
+  font-size: 14px; 
+}
+body{
+    margin: 0rem;
+    padding: 0rem;
+    background-color: #1B3C53;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1B3C53;
+    transition: ease-in-out 1s;
+    flex-direction: column;
+    padding: 1rem;
+   animation: main 1s ease-in-out forwards; 
+   justify-content: flex-start;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #234C6A;
+    padding: 2rem;
+    margin: 0rem;
+    gap: 2rem;
+    border-radius: 1rem;
+    width: 40vw;
+    height: 100vh;
+    & h1{
+        font-size: 3rem;
+    }
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#456882;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 30vw;
+    position: relative;
+    
+    & p{
+        font-size: 5rem;
+        font-weight: 500;
+    }
+}
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    gap: 2vw;
+    & button{
+        padding: 0.5rem;
+        height: 2.5rem;
+        width: 9rem;
+        border-radius: 1rem;
+        border: 1px solid #1B3C53;
+        background-color: #456882;
+        transition: ease-in-out 0.5s;
+        font-weight: 500;
+        
+    }
+}
+button:hover{
+ background-color:#1B3C53;
+ border: 2px solid #456882;
+}
+.sec{
+    padding-right: 30%;
+    padding-right: 0.5rem;
+}
+
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 1.5rem;
+    padding: 1rem;
+    background-color :#234C6A;
+    border-radius:1rem;
+
+}
+
+.mili{
+    font-size: 1rem !important;
+    height: 2rem;
+    margin: 0.8rem 0rem 0rem;
+    border-radius: 0.5rem;
+}
+.leap{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 40vw;
+    background-color:#456882;
+    color: black;
+    height: 100vh;
+    border-radius: 1rem;
+    margin: 1rem;
+    overflow: auto;
+    padding: 1rem;
+}
+
+.leap::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* 
+@keyframes mainLeap {
+    0% {
+        padding-top: 10vh;  
+        display: none;
+    }
+    100% {
+        padding-top: 0.5rem;
+    }
+} */
+.leap::-webkit-scrollbar{
+    width: 0px;
+}
+
+
+@media screen and (min-width:850px) and (max-width:1100px){
+    .time {
+
+        & p{
+        font-size: 4rem;
+        }
+        .mili{
+            font-size: 1.5rem !important;
+            margin:1rem 0rem 0rem 0rem;
+        }
+    }
+    .main{
+        & h1{
+            font-size: 1.5rem;
+        }
+    }
+}
