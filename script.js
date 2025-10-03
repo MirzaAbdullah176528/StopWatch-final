@@ -84,7 +84,7 @@ function leap_value() {
         padding:0.3rem;
         border-radius:0.5rem;
         width:25vw;">
-        Mints:${displayMinutes} -- Seconds:${displaySeconds} -- MiliSec:${displayMili}
+        Mints:${displayMinutes} -------- Seconds:${displaySeconds} -------- MiliSec:${displayMili}
         </p>`;
 
     leapDiv.scrollTop = leapDiv.scrollHeight;
