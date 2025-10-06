@@ -255,6 +255,7 @@ button:hover{
         height: 50vh;
         margin: 0.5rem 0;
         
+        
         & h1 {
             font-size: 1.8rem;
         }
