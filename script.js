@@ -6,7 +6,8 @@ let b4 = document.querySelector(".b4")
 let second = document.querySelector(".sec")
 let mint = document.querySelector(".mint")
 let a = document.querySelector(".mili")
-let leapDiv = document.querySelector(".leap")
+let leapDiv = document.querySelector(".lap")
+let main_lap = document.querySelector(".leap")
 let body = document.querySelector(".body")
 
 let secInterval = null;
@@ -53,14 +54,13 @@ function Reset() {
     clearInterval(secInterval)
     secInterval = null;
     timeLeft = 0;
+    leapDiv.textContent =""
 
 
     second.textContent = `00`
     a.textContent = `000`
     mint.textContent = `00:`
 
-
-    leapDiv.innerHTML=`<h1>LAPS</h1>`
     leapDiv.style.display="none"
     };
 
@@ -75,19 +75,28 @@ function leap_value() {
 
     leapDiv.style.display = "flex";
     leapDiv.innerHTML += `
-        <p style="
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        margin: 0.5rem;
-        background-color: #1B3C53;
-        padding:0.3rem;
-        border-radius:0.5rem;
-        width:25vw;">
-        Mints:${displayMinutes} -------- Seconds:${displaySeconds} -------- MiliSec:${displayMili}
-        </p>`;
+    <div class="time-laped">
 
-    leapDiv.scrollTop = leapDiv.scrollHeight;
+        <div class="time_in_lap">
+        <p>
+        Mints:${displayMinutes}
+        </p>
+        </div>
+
+        <div class="time_in_lap">
+        <p>
+        Seconds:${displaySeconds}
+        </p>
+        </div>
+
+        <div class="time_in_lap">
+        <p>
+        MiliSec:${displayMili}
+        </p>
+        </div>
+    </div>`;
+
+    main_lap.scrollTop = main_lap.scrollHeight;
 }
 
 

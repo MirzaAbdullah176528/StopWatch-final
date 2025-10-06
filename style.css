@@ -87,6 +87,16 @@ body{
     align-items: center;
     justify-content: center;    
 }
+.time_in_lap{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        margin: 0.5rem;
+        background-color: #1B3C53;
+        padding:0.3rem;
+        border-radius:0.5rem;
+        width:10vw;
+}
 
 .btns{
     display: flex;
@@ -138,13 +148,15 @@ button:hover{
     border-radius:1rem;
 
 }
-
-/* .mili{
-    font-size: 1rem !important;
-    height: 2rem;
-    margin: 0.8rem 0rem 0rem;
-    border-radius: 0.5rem;
-} */
+.time-laped{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+    & p{
+        font-size: 1.3rem;
+    }
+}
 .leap{
     display: flex;
     align-items: center;
@@ -159,21 +171,17 @@ button:hover{
     overflow: auto;
     padding: 1rem;
 }
+.lap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
 .leap::-webkit-scrollbar {
     width: 8px;
 }
 
-/* 
-@keyframes mainLeap {
-    0% {
-        padding-top: 10vh;  
-        display: none;
-    }
-    100% {
-        padding-top: 0.5rem;
-    }
-} */
 .leap::-webkit-scrollbar{
     width: 0px;
 }
