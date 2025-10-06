@@ -6,7 +6,6 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     color: #D2C1B6;
-
 }
 
 .body {
@@ -18,6 +17,7 @@ html {
 body{
     margin: 0rem;
     padding: 0rem;
+    overflow-x: hidden !important;
     background-color: #1B3C53;
 }
 
@@ -96,6 +96,7 @@ body{
         padding:0.3rem;
         border-radius:0.5rem;
         width:10vw;
+        margin: 0rem;
 }
 
 .btns{
@@ -114,9 +115,12 @@ body{
         transition: ease-in-out 0.5s;
         font-weight: 400;
         font-size: 1.3rem;
+        align-items: center;
+        justify-content: center;
         
     }
 }
+
 button:hover{
  background-color:#1B3C53;
  border: 2px solid #456882;
@@ -153,6 +157,9 @@ button:hover{
     align-items: center;
     justify-content: space-between;
     gap: 2vw;
+    border: 3px solid  #234C6A;
+    margin-top: 1rem;
+    border-radius:0.5rem ;
     & p{
         font-size: 1.3rem;
     }
@@ -186,21 +193,361 @@ button:hover{
     width: 0px;
 }
 
-
-@media screen and (min-width:850px) and (max-width:1100px){
-    .time {
-
-        & p{
-        font-size: 4rem;
-        }
-        .mili{
-            font-size: 1.5rem !important;
-            margin:1rem 0rem 0rem 0rem;
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+    
+    .body {
+        transform: scale(1);
+        padding: 0.5rem;
+        flex-direction: column;
+    }
+    
+    .main {
+        width: 90vw;
+        height: auto;
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+        margin-top: 5rem;
+        
+        & h1 {
+            font-size: 2rem;
         }
     }
-    .main{
-        & h1{
-            font-size: 1.5rem;
+    
+    .time {
+        width: 90vw;
+    }
+    
+    .time-count {
+        width: 90vw;
+        padding: 1rem;
+        margin-left: 0;
+        flex-wrap: wrap;
+        
+        & p {
+            font-size: 2.5rem;
+        }
+    }
+    
+    .mili {
+        font-size: 1rem !important;
+        padding: 0.5rem;
+    }
+    
+    .btns {
+        width: 90vw;
+        gap: 1vw;
+        flex-wrap: wrap;
+        
+        & button {
+            width: 45%;
+            height: 2.5rem;
+            font-size: 1rem;
+            margin: 0.25rem;
+        }
+    }
+    
+    .leap {
+        width: 90vw;
+        height: 50vh;
+        margin: 0.5rem 0;
+        
+        & h1 {
+            font-size: 1.8rem;
+        }
+    }
+    
+    .time_in_lap {
+        width: 28vw;
+        padding: 0.5rem 0.2rem;
+        
+        & p {
+            font-size: 0.9rem;
+        }
+    }
+    
+    .time-laped {
+        gap: 1vw;
+        padding: 0.5rem;
+        
+        & p {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .body {
+        transform: scale(0.95);
+        padding: 1rem;
+    }
+    
+    .main {
+        width: 85vw;
+        height: auto;
+        padding: 2rem 1.5rem;
+        gap: 1.8rem;
+        
+        & h1 {
+            font-size: 2.5rem;
+        }
+    }
+    
+    .time {
+        width: 80vw;
+    }
+    
+    .time-count {
+        width: 80vw;
+        padding: 1.5rem;
+        margin-left: 0;
+        
+        & p {
+            font-size: 3.5rem;
+        }
+    }
+    
+    .mili {
+        font-size: 1.3rem !important;
+        padding: 0.8rem;
+    }
+    
+    .btns {
+        width: 75vw;
+        gap: 1.5vw;
+        flex-wrap: wrap;
+        
+        & button {
+            width: 8rem;
+            height: 2.5rem;
+            font-size: 1.1rem;
+        }
+    }
+    
+    .leap {
+        width: 85vw;
+        height: 60vh;
+        margin: 1rem 0;
+    }
+    
+    .time_in_lap {
+        width: 25vw;
+        padding: 0.4rem;
+    }
+    
+    .time-laped {
+        gap: 1.5vw;
+        
+        & p {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1100px) {
+    .body {
+        flex-direction: column;
+    }
+    
+    .main {
+        width: 75vw;
+        height: auto;
+        padding: 2rem;
+        gap: 2rem;
+        height: 50vh;
+        
+        & h1 {
+            font-size: 2.8rem;
+        }
+    }
+    
+    .time {
+        width: 75vw;
+    
+    }
+    
+    .time-count {
+        width: 70vw;
+        padding: 1.8rem;
+        margin-left: 0;
+        
+        & p {
+            font-size: 4rem;
+        }
+    }
+    
+    .mili {
+        font-size: 1.4rem !important;
+    }
+    
+    .btns {
+        width: 65vw;
+        gap: 2vw;
+        
+        & button {
+            width: 8.5rem;
+            font-size: 1.2rem;
+        }
+    }
+    
+    .leap {
+        width: 75vw;
+        height: 50vh;
+        margin: 1rem 0;
+    }
+    
+    .time_in_lap {
+        width: 20vw;
+    }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+    .main {
+        width: 60vw;
+        
+        & h1 {
+            font-size: 2.8rem;
+        }
+    }
+    
+    .time {
+        width: 60vw;
+    }
+    
+    .time-count {
+        width: 42vw;
+        margin-left: 3vw;
+        
+        & p {
+            font-size: 4.5rem;
+        }
+    }
+    
+    .btns {
+        width: 35vw;
+        
+        & button {
+            width: 8.5rem;
+        }
+    }
+    
+    .leap {
+        width: 60vw;
+    }
+    
+    .time_in_lap {
+        width: 12vw;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    html {
+        font-size: 15px;
+    }
+    
+    .main {
+        width: 38vw;
+        
+        & h1 {
+            font-size: 3.2rem;
+        }
+    }
+    
+    .time {
+        width: 38vw;
+    }
+    
+    .time-count {
+        width: 36vw;
+        margin-left: 3.5vw;
+        
+        & p {
+            font-size: 5.5rem;
+        }
+    }
+    
+    .mili {
+        font-size: 1.6rem !important;
+    }
+    
+    .btns {
+        width: 32vw;
+        
+        & button {
+            width: 9.5rem;
+            font-size: 1.4rem;
+        }
+    }
+    
+    .leap {
+        width: 38vw;
+    }
+    
+    .time_in_lap {
+        width: 9vw;
+    }
+    
+    .time-laped {
+        & p {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+/* Landscape orientation adjustments for mobile/tablets */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .body {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 0.5rem;
+    }
+    
+    .main {
+        width: 48vw;
+        height: 95vh;
+        padding: 1rem;
+        gap: 1rem;
+        
+        & h1 {
+            font-size: 1.8rem;
+        }
+    }
+    
+    .time-count {
+        padding: 1rem;
+        
+        & p {
+            font-size: 2.5rem;
+        }
+    }
+    
+    .mili {
+        font-size: 1rem !important;
+        padding: 0.5rem;
+    }
+    
+    .btns {
+        & button {
+            height: 2rem;
+            font-size: 1rem;
+        }
+    }
+    
+    .leap {
+        width: 48vw;
+        height: 95vh;
+        margin: 0;
+        
+        & h1 {
+            font-size: 1.8rem;
         }
     }
 }
