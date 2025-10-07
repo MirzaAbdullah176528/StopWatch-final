@@ -79,19 +79,19 @@ function leap_value() {
 
         <div class="time_in_lap">
         <p>
-        Mints:${displayMinutes}
+        ${displayMinutes}
         </p>
         </div>
 
         <div class="time_in_lap">
         <p>
-        Seconds:${displaySeconds}
+        ${displaySeconds}
         </p>
         </div>
 
         <div class="time_in_lap">
         <p>
-        MiliSec:${displayMili}
+        ${displayMili}
         </p>
         </div>
     </div>`;
