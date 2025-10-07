@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 *{
     margin: 0rem;
     padding: 0rem;
@@ -7,7 +6,6 @@
     font-family: "Roboto", sans-serif;
     color: #D2C1B6;
 }
-
 .body {
   transform: scale(0.9); 
 }
@@ -20,7 +18,6 @@ body{
     overflow-x: hidden !important;
     background-color: #1B3C53;
 }
-
 .body {
     display: flex;
     align-items: center;
@@ -33,7 +30,6 @@ body{
    animation: main 1s ease-in-out forwards; 
    justify-content: flex-start;
 }
-
 .main{
     display: flex;
     align-items: center;
@@ -50,7 +46,6 @@ body{
         font-size: 3rem;
     }
 }
-
 .time-count{
     display: flex;
     align-items: center;
@@ -81,7 +76,6 @@ body{
         font-weight: 500;
     }
 }
-
 .time-main{
     display: flex;
     align-items: center;
@@ -98,7 +92,6 @@ body{
         width:10vw;
         margin: 0rem;
 }
-
 .btns{
     display: flex;
     align-items: center;
@@ -120,7 +113,6 @@ body{
         
     }
 }
-
 button:hover{
  background-color:#1B3C53;
  border: 2px solid #456882;
@@ -140,7 +132,6 @@ button:hover{
     font-size: 1.5rem !important;
     padding: 1rem;
 }
-
 .control{
     display: flex;
     align-items: center;
@@ -150,7 +141,6 @@ button:hover{
     padding: 1rem;
     background-color :#234C6A;
     border-radius:1rem;
-
 }
 .time-laped{
     display: flex;
@@ -176,23 +166,62 @@ button:hover{
     border-radius: 1rem;
     margin: 1rem;
     overflow: auto;
-    padding: 1rem;
+    padding: 0;
 }
 .lap{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 1rem;
 }
-
 .leap::-webkit-scrollbar {
     width: 8px;
 }
-
 .leap::-webkit-scrollbar{
     width: 0px;
 }
 
+/* Table styling */
+.leap .table {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    font-size: 2rem;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0;
+    text-align: center;
+    gap: 2vw; 
+}
+.leap h1 {
+    background-color: #234C6A;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0;
+    text-align: center;
+}
+.leap .table p {
+    flex: 1;
+    text-align: center;
+}
+.main-table {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #234C6A;
+    z-index: 2;
+    border-radius: 1rem 1rem 0 0;
+}
+
+/* Base .p class - Default for desktop (1400px+) */
+.p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Mobile devices (up to 600px) */
 @media screen and (max-width: 600px) {
     html {
         font-size: 12px;
@@ -255,7 +284,6 @@ button:hover{
         height: 50vh;
         margin: 0.5rem 0;
         
-        
         & h1 {
             font-size: 1.8rem;
         }
@@ -278,8 +306,15 @@ button:hover{
             font-size: 1rem;
         }
     }
+    
+    /* Fixed .p class for mobile */
+    .p {
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
 }
 
+/* Tablets (601px to 800px) */
 @media screen and (min-width: 601px) and (max-width: 800px) {
     html {
         font-size: 13px;
@@ -350,57 +385,15 @@ button:hover{
             font-size: 1.1rem;
         }
     }
-}
-.leap .table {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    font-size: 2rem;
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0;
-    text-align: center;
-    gap: 2vw; 
+    
+    /* Fixed .p class for tablets */
+    .p {
+        font-size: 1.15rem;
+        font-weight: 500;
+    }
 }
 
-.leap h1 {
-    background-color: #234C6A;
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0;
-    text-align: center;
-}
-.leap .table p {
-    flex: 1;
-    text-align: center;
-}
-.leap {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    /* width: 40vw; */
-    background-color: #456882;
-    color: black;
-    height: 100vh;
-    border-radius: 1rem;
-    margin: 1rem;
-    overflow: auto;
-    padding: 0;
-}
-
-.lap {
-    padding: 1rem;
-}
-.main-table {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background-color: #234C6A;
-    z-index: 2;
-    border-radius: 1rem 1rem 0 0;
-}
-
+/* Medium tablets/small laptops (800px to 1100px) */
 @media screen and (min-width: 800px) and (max-width: 1100px) {
     .body {
         flex-direction: column;
@@ -420,7 +413,6 @@ button:hover{
     
     .time {
         width: 75vw;
-    
     }
     
     .time-count {
@@ -456,8 +448,15 @@ button:hover{
     .time_in_lap {
         width: 20vw;
     }
+    
+    /* Fixed .p class for medium screens */
+    .p {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
 }
 
+/* Laptops (1100px to 1400px) */
 @media screen and (min-width: 1100px) and (max-width: 1400px) {
     .main {
         width: 60vw;
@@ -495,8 +494,15 @@ button:hover{
     .time_in_lap {
         width: 12vw;
     }
+    
+    /* Fixed .p class for laptops */
+    .p {
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
 }
 
+/* Large desktops (1400px+) */
 @media screen and (min-width: 1400px) {
     html {
         font-size: 15px;
@@ -549,9 +555,12 @@ button:hover{
             font-size: 1.4rem;
         }
     }
+    
+    /* Base .p class already handles this */
 }
 
-@media screen and (max-height: 600px) and (min-width:300px) {
+/* Landscape mode (short height screens) */
+@media screen and (max-height: 400px) and (min-width: 300px) {
     .body {
         flex-direction: row;
         justify-content: space-around;
@@ -591,12 +600,19 @@ button:hover{
     }
     
     .leap {
-        width: 80vw !important;
+        width: 48vw !important;
         height: 95vh;
         margin: 0;
         
         & h1 {
             font-size: 1.8rem;
         }
+    }
+    
+    /* Fixed .p class for landscape - now readable */
+    .p {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.3;
     }
 }
